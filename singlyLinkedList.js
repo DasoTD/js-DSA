@@ -25,8 +25,8 @@ class LinkedList{
         this.length ++
         return this
     }
-    pop(value){
-        const newNode = new Node(value);
+    pop(){
+        //const newNode = new Node(value);
         if(!this.head) return undefined;
         let temp = this.head;
         let pre = this.head;
@@ -59,8 +59,8 @@ class LinkedList{
             this.length ++
         return this
     }
-    shift(value){
-        const newNode = new Node(value);
+    shift(){
+        //const newNode = new Node(value);
         if(!this.head) return undefined
         if(this.length === 1){
             this.head = null
