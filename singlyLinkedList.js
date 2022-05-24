@@ -84,8 +84,25 @@ class LinkedList{
         }
         return temp
     }
-    // set(index, value){
+    set(index, value){
        
-    //     let temp = this.get(index)
-    // }
+        let temp = this.get(index)
+        if(temp){
+            temp.value = value
+            return true
+        }
+        return false
+    }
+    insert(index, value){
+        if(index === 0) return this.unshift(value)
+        if(index === this.length) return this.push(value)
+         if(index < 0 || index > this.length) return false
+        const newNode = new Node(value);
+        const temp = this.get(index -1)
+        newNode.next = temp.next
+        temp.next = newNode
+        this.length ++
+        return true
+        
+    }
 }
