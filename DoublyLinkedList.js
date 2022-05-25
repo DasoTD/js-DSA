@@ -110,7 +110,9 @@ class DoublyLinkedList{
      if(index < 0 || index > this.length) return false
     const newNode = new Node(value);
     let temp = this.get(index-1)
-    newNode.next = temp.next
+    let after = temp.next
+    newNode.next = after
+    after.prev = newNode
     temp.next = newNode
     newNode.prev = temp
     this.length ++
