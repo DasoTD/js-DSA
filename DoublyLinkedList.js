@@ -118,6 +118,9 @@ class DoublyLinkedList{
     this.length ++
     return true
 }
+remove(index){
+    
+}
    
     
 }
