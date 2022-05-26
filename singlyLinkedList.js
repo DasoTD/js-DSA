@@ -62,16 +62,17 @@ class LinkedList{
     shift(){
         //const newNode = new Node(value);
         if(!this.head) return undefined
+        let temp  = this.head
         if(this.length === 1){
             this.head = null
             this.tail = null
         } else {
-            let temp  = this.head
             this.head = this.head.next
-            return temp
-            temp = null
-        } this.length --
-        //return this
+            //return temp
+            temp.next = null
+        } 
+        this.length--
+        return this
         
     }
     get(index){
