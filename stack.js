@@ -4,7 +4,7 @@ class Node{
         this.next = null
     }
 }
-
+///
 class Stack {
     constructor(value){
         const newNode = new Node(value)
